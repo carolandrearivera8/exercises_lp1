@@ -16,7 +16,16 @@ public class Ejercicios {
      */
     public String ejercicio1(int num1, int num2) {
         // Implementar solución
-        return "";
+        if (num1>num2) {
+            return "El número mayor es: 10";
+        }
+        else if (num2>num1) {
+            return "El número mayor es: 10";
+        }
+        else if (num1 == num2) {
+            return "Los dos números son iguales.";
+        }
+        return null;
     }
     // ----------------------------------------------------------------------------------------
 
@@ -33,7 +42,12 @@ public class Ejercicios {
      */
     public String ejercicio2(double calificacion) {
        // Implementar solución
-        return "";
+       if (calificacion < 3.5) {
+        return "Lo siento, usted ha reprobado el examen.";
+       }
+       else {
+        return "¡Felicidades! Usted ha aprobado el examen.";
+       }
     }
 
     // ----------------------------------------------------------------------------------------
@@ -50,7 +64,12 @@ public class Ejercicios {
      */
     public double ejercicio3(double precio) {
         // Implementar solución
-        return 0;
+        if (precio >= 50000) {
+            return precio * 0.9;
+        }
+        else {
+            return precio;
+        }
     }
 
     // ----------------------------------------------------------------------------------------
@@ -82,7 +101,22 @@ public class Ejercicios {
     public String ejercicio4(int tipoFigura, double ladoCuadrado, double baseTriangulo, double alturaTriangulo,
             double radioCirculo) {
         // Implementar solución
-        return "";
+        double area = 0;
+        switch (tipoFigura) {
+            case 1:
+                area = ladoCuadrado * ladoCuadrado;
+                break;
+            case 2:
+                area = (baseTriangulo * alturaTriangulo) /2;
+                break;
+            case 3:
+                area = Math.PI * radioCirculo * radioCirculo;
+                break;
+        
+            default:
+                return "Tipo de figura no válida.";
+        }
+        return "El área de la figura es: " + area;
     }
 
     // ----------------------------------------------------------------------------------------
@@ -99,6 +133,6 @@ public class Ejercicios {
      */
     public int ejercicio5(int num1, int num2, int num3) {
         // Implementar solución
-        return 0;
+        return Math.min(Math.min(num1, num2), num3);
     }
 }
